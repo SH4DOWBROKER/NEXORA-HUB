@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <audio src="https://b.top4top.io/m_3339uz9r21.mp3" autoplay loop hidden></audio>
+   <title>NEXORA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: url('./Images/rain.png') no-repeat center center/cover;
+            background-attachment: fixed;
+            color: #0ff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .menu-btn {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff;
+            z-index: 1000;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 10px #00ffcc;
+            transition: left 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #0ff;
+            padding: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+            text-shadow: 0 0 10px #0ff;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background: #00ffcc;
+            color: black;
+            text-shadow: 0 0 20px #00ffcc;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        h1 {
+            color: #ff0099;
+            text-shadow: 0 0 10px #ff0099, 0 0 20px #ff00ff;
+            font-size: 48px;
+            animation: flicker 1.5s infinite alternate;
+            margin-top: 100px;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        .subheading.one {
+            color: #00ffcc;
+            text-shadow: 0 0 40px #00ffcc;
+            font-size: 25px;
+        }
+
+        .subheading.two {
+            color: #ffcc00;
+            text-shadow: 0 0 10px #ffcc00;
+            font-size: 20px;
+        }
+
+        .subheading.three {
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 1000px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(20, 20, 20, 0.9);
+            width: 270px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px #ff00ff;
+            border: 2px solid #ff00ff;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #0ff, 0 0 40px #ff00ff;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #0ff;
+            box-shadow: 0 0 10px #0ff;
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+            color: #ff00ff;
+            text-shadow: 0 0 5px #ff00ff, 0 0 15px #ff00ff;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #0ff;
+            text-shadow: 0 0 5px #0ff;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 16px;
+            animation: colorCycle 5s infinite alternate;
+        }
+
+        @keyframes colorCycle {
+            0% { color: #ff0099; }
+            50% { color: #00ffcc; }
+            100% { color: #ffcc00; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Toggle Button -->
+    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>ABOUT US</h1>
+        <p class="subheading one">WE ARE THE STUDENTS OF BISHOP JEROME INSTITUTE</p>
+        <p class="subheading two">MAKING SOMETHING SPECIAL</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="card">
+                <img src="./Images/Adhi.png" alt="Photo of Adithyan S">
+                <h3>ADITHYAN S</h3>
+                <p>HEY I'm a WEB-Developer & Certified Ethical Hacker Jr. Learning Day By Day</p>
+            </div>
+
+            <div class="card">
+                <img src="./Images/Badhu.png" alt="Photo of Badusha">
+                <h3>BADHUSHA</h3>
+                <p>UI/UX DESIGNER. Designing the future, one pixel at a time.</p>
+            </div>
+
+            <div class="card">
+                <img src="./Images/Varsha.png" alt="Photo of Varsha">
+                <h3>VARSHA</h3>
+                <p></p>
+            </div>
+
+            <div class="card">
+                <img src="./Images/Shahina.png" alt="Photo of Shahina">
+                <h3>SHAHINA</h3>
+                <p></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        NEXORA WEB &copy; Developed By TEAM BJI
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
